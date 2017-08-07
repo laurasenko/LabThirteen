@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="wordApp" ng-controller="wordController">
+	<head>
+		<title></title>
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+
+	<body>
+		<button ng-click="random(oneWord)" >Words</button>
+		<button>Words w/ Decoration</button>
+		<button>More Words</button>
+		<button>More Words w/ Decoration</button>
+
+		<div>
+			<span ng-model="oneWord" ng-repeat="word in words">
+				{{word.text}}
+
+			</span>
+
+			<span>{{pool.text}}</span>
+		</div>
+	</body>
+</html>
