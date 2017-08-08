@@ -7,18 +7,17 @@
 	</head>
 
 	<body>
-		<button ng-click="random(oneWord)" >Words</button>
+		<button ng-click="random(word)" >Words</button>
 		<button>Words w/ Decoration</button>
-		<button>More Words</button>
+		<button ng-click="otherRandom()">More Words</button>
 		<button>More Words w/ Decoration</button>
 
 		<div>
-			<span ng-model="oneWord" ng-repeat="word in words">
+			<span ng-class="style" ng-repeat="word in words track by $index" ng-model="word">
 				{{word.text}}
 
 			</span>
 
-			<span>{{pool.text}}</span>
 		</div>
 	</body>
 </html>
